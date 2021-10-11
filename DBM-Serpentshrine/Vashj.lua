@@ -12,7 +12,7 @@ mod:SetMinSyncRevision(20210919000000)
 mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
-	"SPELL_AURA_APPLIED 38280 38575",
+	"SPELL_AURA_APPLIED 38280 38575 360327",
 	"SPELL_AURA_REMOVED 38280 38132",
 	"SPELL_CAST_START 38253",
 	"SPELL_CAST_SUCCESS 38316",
@@ -97,7 +97,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		if self.Options.ChargeIcon then
 			self:SetIcon(args.destName, 1, 20)
 		end
-	elseif args.spellId == 38575 and args:IsPlayer() and self:AntiSpam() then
+	elseif args:IsSpellID(38575, 360327) and args:IsPlayer() and self:AntiSpam() then
 		specWarnToxic:Show()
 		specWarnToxic:Play("runaway")
 	end
