@@ -4,6 +4,7 @@ local L		= mod:GetLocalizedStrings()
 mod:SetRevision("@file-date-integer@")
 mod:SetCreatureID(21216)
 mod:SetEncounterID(623, 2458)
+mod:DisableEEKillDetection()--EE always fires wipe
 mod:SetModelID(20162)
 
 mod:RegisterCombat("combat")
