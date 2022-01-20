@@ -28,6 +28,7 @@ globals = {
 	-- DBM
 	"DBM",
 	"DBM_CORE_L",
+	"DBM_COMMON_L",
 	"DBM_DISABLE_ZONE_DETECTION",
 	"DBM_GUI",
 	"DBM_GUI_L",
@@ -58,7 +59,6 @@ globals = {
 	"tostringall",
 	"tremove",
 
-	-- WoW
 	-- WoW
 	"ALL",
 	"ALWAYS",
@@ -129,6 +129,7 @@ globals = {
 	"TOAST_DURATION_LONG",
 	"WOW_PROJECT_ID",
 	"WOW_PROJECT_BURNING_CRUSADE_CLASSIC",
+	"WOW_PROJECT_MAINLINE",
 	"YES",
 
 	"BackdropTemplateMixin",
@@ -210,6 +211,7 @@ globals = {
 	"GetDungeonInfo",
 	"GetExpansionLevel",
 	"GetGameTime",
+	"GetGossipOptions",
 	"GetGuildInfo",
 	"GetGuildRosterInfo",
 	"GetGuildRosterShowOffline",

@@ -15,6 +15,9 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 31344"
 )
 
+--[[
+ability.id = 31344 and type = "cast"
+--]]
 local warnSilence		= mod:NewSpellAnnounce(31344, 3)
 local warnDoom			= mod:NewTargetNoFilterAnnounce(31347, 4)
 
@@ -23,8 +26,8 @@ local specWarnDoom		= mod:NewSpecialWarningYou(31347)
 local yellDoom			= mod:NewShortFadesYell(31347)
 
 local timerDoom			= mod:NewTargetTimer(20, 31347, nil, nil, nil, 3)
-local timerSilence		= mod:NewBuffFadesTimer(5, 31344, nil, nil, nil, 2, nil, DBM_CORE_L.TANK_ICON..DBM_CORE_L.HEALER_ICON)
-local timerSilenceCD	= mod:NewCDTimer(18, 31344, nil, nil, nil, 2, nil, DBM_CORE_L.TANK_ICON..DBM_CORE_L.HEALER_ICON)
+local timerSilence		= mod:NewBuffFadesTimer(5, 31344, nil, nil, nil, 2, nil, DBM_COMMON_L.TANK_ICON..DBM_COMMON_L.HEALER_ICON)
+local timerSilenceCD	= mod:NewCDTimer(16.7, 31344, nil, nil, nil, 2, nil, DBM_COMMON_L.TANK_ICON..DBM_COMMON_L.HEALER_ICON)--16-33
 
 local berserkTimer		= mod:NewBerserkTimer(600)
 

@@ -50,7 +50,7 @@ function mod:OnCombatStart(delay)
 	timerFACD:Start(24.4-delay)
 	if not self:IsTrivial() then
 		self:RegisterShortTermEvents(
-			"UNIT_HEALTH boss1"
+			"UNIT_HEALTH"
 		)
 	end
 end
@@ -68,6 +68,10 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 		if self.Options.FAIcons then
 			self:SetSortedIcon(1, args.destName, 1)
+		end
+		--In case no UNIT_SPELLCAST_SUCCEEDED event caught
+		if self:AntiSpam(3, 40869) then
+			timerFACD:Start()
 		end
 	end
 end

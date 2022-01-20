@@ -23,7 +23,7 @@ local warnPhase			= mod:NewPhaseChangeAnnounce(2, nil, nil, nil, nil, nil, 2)
 
 local specWarnParalyze	= mod:NewSpecialWarningDispel(43095, "RemoveMagic", nil, nil, 1, 2)
 
-local timerParalyzeCD	= mod:NewCDTimer(27, 43095, nil, nil, nil, 3, nil, DBM_CORE_L.MAGIC_ICON)
+local timerParalyzeCD	= mod:NewCDTimer(27, 43095, nil, nil, nil, 3, nil, DBM_COMMON_L.MAGIC_ICON)
 
 function mod:OnCombatStart(delay)
 	self:SetStage(1)
