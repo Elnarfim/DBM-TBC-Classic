@@ -12,6 +12,7 @@ externals:
   DBM-Outlands/Libs/LibDataBroker-1.1: https://github.com/tekkub/libdatabroker-1-1
   DBM-Outlands/Libs/LibDeflate: https://github.com/SafeteeWoW/LibDeflate
   DBM-Outlands/Libs/LibSerialize: https://github.com/rossnichols/LibSerialize
+  DBM-VPVEM: https://github.com/DeadlyBossMods/DBM-Voicepack-VEM
 
 ignore:
   - DBM-Outlands/Libs/LibDeflate/docs
@@ -22,6 +23,7 @@ ignore:
   - DBM-Outlands/Libs/LibDeflate/changelog.md
   - DBM-Outlands/Libs/LibStub/tests
   - DBM-Outlands/Libs/LibDataBroker-1.1/README.textile
+  - DBM-VPVEM/README.md
 
 enable-nolib-creation: no
 
@@ -49,3 +51,4 @@ move-folders:
   DBM-Outlands/DBM-GUI: DBM-GUI
   DBM-Outlands/DBM-StatusBarTimers: DBM-StatusBarTimers
   DBM-Outlands/Libs: DBM-Core/Libs
+  DBM-Outlands/DBM-VPVEM/DBM-VPVEM: DBM-VPVEM
