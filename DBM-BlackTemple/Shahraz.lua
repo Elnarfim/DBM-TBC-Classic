@@ -6,6 +6,8 @@ mod:SetCreatureID(22947)
 mod:SetEncounterID(607, 2478)
 mod:SetModelID(21252)
 mod:SetUsedIcons(1, 2, 3)
+mod:SetHotfixNoticeRev(20220130000000)
+mod:SetMinSyncRevision(20220130000000)
 
 mod:RegisterCombat("combat")
 
@@ -195,7 +197,7 @@ do
 	function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 		if self:AntiSpam(3, spellId) then
 			if aura[spellId] then
-				self:SendSync("Prismatic")
+				self:SendSync("Prismatic", spellId)
 			elseif spellId == 40869 then--Cast event not in combat log, only applied and that can be resisted (especially on non timewalker). this ensures timer always exists
 				table.wipe(FATargets)
 				timerFACD:Start()
@@ -218,8 +220,11 @@ do
 	--Cluttering comms for UNIT events because of nochanges is fun.
 	function mod:OnSync(msg, spellId)
 		if msg == "Prismatic" and spellId and self:IsInCombat() then
-			local spellName = DBM:GetSpellInfo(tonumber(spellId))
-			timerAura:Start(spellName)
+			spellId = tonumber(spellId)
+			if type(spellId) == "number" then
+				local spellName = DBM:GetSpellInfo()
+				timerAura:Start(spellName)
+			end
 		elseif msg == "North" or msg == "South" or msg == "None" then
 			self:Schedule(3, UpdateRLPreference, self, msg)
 		end

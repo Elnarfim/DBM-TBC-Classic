@@ -4,7 +4,10 @@ local L		= mod:GetLocalizedStrings()
 mod:SetRevision("@file-date-integer@")
 mod:SetCreatureID(22841)
 mod:SetEncounterID(603, 2475)
+mod:DisableEEKillDetection()--EE always fires wipe
 mod:SetModelID(21357)
+mod:SetHotfixNoticeRev(20220130000000)
+mod:SetMinSyncRevision(20220130000000)
 
 mod:RegisterCombat("combat")
 mod:SetWipeTime(50)--Adds come about every 50 seconds, so require at least this long to wipe combat if they die instantly
