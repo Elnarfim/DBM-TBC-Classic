@@ -72,8 +72,8 @@ function mod:UPDATE_UI_WIDGET(table)
 	self:WaveFunction(currentWave)
 end
 
-function mod:OnSync(msg, arg)
-	if msg == "boss" then
+function mod:OnSync(msg, arg, sender)
+	if msg == "boss" and sender then
 		boss = tonumber(arg)
 	end
 end

@@ -270,7 +270,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	end
 end
 
-function mod:OnSync(event, arg)
+function mod:OnSync(event)
 	if not self:IsInCombat() then return end
 	if event == "Flamestrike" then
 		warnFlamestrike:Show()

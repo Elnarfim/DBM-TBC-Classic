@@ -185,7 +185,7 @@ end
 
 do
 	local myName = UnitName("player")
-	function mod:OnSync(msg, playerName)
+	function mod:OnSync(msg)--playerName
 		if not self:IsInCombat() then return end
 		if msg == "Phase2" and self.vb.phase < 2 then
 			self:SetStage(2)
