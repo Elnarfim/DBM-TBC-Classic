@@ -73,7 +73,7 @@ L:SetTimerLocalization{
 
 L:SetOptionLocalization{
 	WarnPhase		= "警报：下一阶段",
-	TimerPhase		= "计时器：下一阶段",
+	TimerPhase		= "计时条：下一阶段",
 	VaporIcon		= DBM_CORE_L.AUTO_ICONS_OPTION_TEXT:format(45392),
 	EncapsIcon		= DBM_CORE_L.AUTO_ICONS_OPTION_TEXT:format(45665)
 }
@@ -132,8 +132,8 @@ L:SetOptionLocalization{
 	WarnHuman		= "警报：暗誓精灵",
 	WarnVoid		= "警报：虚空戒卫",
 	WarnFiend		= "警报：2阶段黑暗魔",
-	TimerHuman		= "计时器：暗誓精灵",
-	TimerVoid		= "计时器：虚空戒卫",
+	TimerHuman		= "计时条：暗誓精灵",
+	TimerVoid		= "计时条：虚空戒卫",
 	TimerPhase		= "显示阶段转换的过渡时间"
 }
 
@@ -166,7 +166,7 @@ L:SetOptionLocalization{
 	WarnBlueOrb		= "警报：蓝龙宝珠",
 	SpecWarnDarkOrb	= "特殊警报：护盾宝珠",
 	SpecWarnBlueOrb	= "特殊警报：蓝龙宝珠",
-	TimerBlueOrb	= "计时器：蓝龙宝珠",
+	TimerBlueOrb	= "计时条：蓝龙宝珠",
 	RangeFrame		= DBM_CORE_L.AUTO_RANGE_OPTION_TEXT:format(10, 45641),
 	BloomIcon		= DBM_CORE_L.AUTO_ICONS_OPTION_TEXT:format(45641)
 }

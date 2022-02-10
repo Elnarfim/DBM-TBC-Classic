@@ -27,8 +27,8 @@ L:SetOptionLocalization{
 	WarnBearSoon	= "预警：熊形态",
 	WarnNormal		= "警报：人形态",
 	WarnNormalSoon	= "预警：人形态",
-	TimerBear		= "计时器：熊形态",
-	TimerNormal		= "计时器：人形态"
+	TimerBear		= "计时条：熊形态",
+	TimerNormal		= "计时条：人形态"
 }
 
 L:SetMiscLocalization{
