@@ -32,13 +32,13 @@ local function Adds(self)
 	self.vb.addType = self.vb.addType + 1
 	if self.vb.addType == 1 then--Heathen
 		warnHeathenGuard:Show(self.vb.addSet.."-"..self.vb.addType)
-		timerReaverCD:Start()
+		timerReaverCD:Start(nil, self.vb.addSet+1)
 	elseif self.vb.addType == 2 then--Reaver
 		warnReaverGuard:Show(self.vb.addSet.."-"..self.vb.addType)
-		timerSharpShooterCD:Start()
+		timerSharpShooterCD:Start(nil, self.vb.addSet+1)
 	elseif self.vb.addType == 3 then--SharpShooter
 		warnSharpShooterGuard:Show(self.vb.addSet.."-"..self.vb.addType)
-		timerHeathenCD:Start()
+		timerHeathenCD:Start(nil, self.vb.addSet+1)
 		self.vb.addType = 0
 	end
 	self:Schedule(21, Adds, self)
