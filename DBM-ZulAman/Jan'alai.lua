@@ -23,7 +23,7 @@ local specWarnBreath	= mod:NewSpecialWarningYou(43140, nil, nil, nil, 1, 2)
 local yellFlamebreath	= mod:NewYell(43140)
 
 local timerBomb			= mod:NewCastTimer(12, 42630, nil, nil, nil, 3)--Cast bar?
-local timerAdds			= mod:NewNextTimer(92, 43962, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
+--local timerAdds			= mod:NewNextTimer(92, 43962, nil, nil, nil, 1, nil, DBM_COMMON_L.DAMAGE_ICON)
 
 local berserkTimer		= mod:NewBerserkTimer(600)
 
@@ -44,7 +44,7 @@ function mod:FlameTarget(targetname, uId)
 end
 
 function mod:OnCombatStart(delay)
-	timerAdds:Start(10)
+--	timerAdds:Start(10)
 	berserkTimer:Start(-delay)
 end
 
@@ -57,8 +57,8 @@ end
 function mod:CHAT_MSG_MONSTER_YELL(msg)
 	if msg == L.YellAdds or msg:find(L.YellAdds) then
 		specWarnAdds:Show()
-		warnAddsSoon:Schedule(82)
-		timerAdds:Start()
+--		warnAddsSoon:Schedule(82)
+--		timerAdds:Start()
 	elseif msg == L.YellBomb or msg:find(L.YellBomb) then
 		specWarnBomb:Show()
 		specWarnBomb:Play("watchstep")
